@@ -1030,13 +1030,17 @@ footer > div {
 }
 
 @media (max-width: 480px) {
-  .brand { gap: 9px; }
+  .header { padding-inline: 14px; }
+  .brand { gap: 7px; }
   .brand img { width: 38px; height: 38px; }
   .brand strong { font-size: 18px; }
   .brand small { font-size: 8px; }
-  .hero { height: 700px; min-height: 700px; }
-  .hero-copy { padding-top: 118px; }
-  .hero h1 { font-size: clamp(52px, 18vw, 78px); }
+  .hero { height: 720px; min-height: 720px; }
+  .hero-copy { padding: 118px 16px 170px; }
+  .hero h1 { font-size: clamp(50px, 17vw, 72px); }
+  .hero-copy .eyebrow { font-size: 9px; letter-spacing: 0.16em; }
+  .intro { margin: 24px 0 24px; font-size: 14px; line-height: 1.65; }
+  .actions { gap: 8px; }
   .hero-stats { grid-template-columns: 150px 1fr; }
   .hero-stats > div:nth-child(2) { display: none; }
   .hero-stats > a { gap: 10px; }
@@ -1053,6 +1057,8 @@ footer > div {
   .values { grid-template-columns: 1fr; }
   .join-grid ul { grid-template-columns: 1fr; }
   .join-grid article { min-height: 320px; }
+  .join-grid h3 { font-size: 34px; }
+  .join-grid a { max-width: 100%; justify-content: space-between; }
   .partner-card { grid-template-columns: 1fr; }
   .partner-logo { min-height: 180px; }
   .partner-logo img { width: 120px; height: 120px; }
@@ -1066,6 +1072,46 @@ footer > div {
   footer { align-content: center; }
   footer .brand { margin: 0; }
   footer > div { width: 100%; }
+}
+
+@media (max-width: 360px) {
+  .brand small { display: none; }
+  .brand strong { font-size: 16px; }
+  .hero { height: 690px; min-height: 690px; }
+  .hero-copy { padding-top: 108px; }
+  .hero h1 { font-size: 48px; }
+  .hero-copy .eyebrow span { width: 22px; }
+  .hero-logo { right: -58px; width: 240px; height: 240px; }
+  .hero-stats { grid-template-columns: 138px 1fr; }
+  .hero-stats > a { padding-inline: 14px; font-size: 9px; }
+  .announcement { grid-template-columns: 1fr 76px; }
+  .win { width: 76px; }
+  .result { padding-inline: 16px; }
+  .team-section,
+  .join-section,
+  .sponsor-section,
+  .page-hero { padding-inline: 16px; }
+  .partner-card { margin-inline: 16px; }
+  .team-section h2,
+  .join-section h2,
+  .sponsor-section h2 { font-size: 48px; }
+  .page-hero h1 { font-size: 58px; }
+  .news-list { padding-inline: 16px; }
+  .join-grid article { padding-inline: 20px; }
+  footer { padding-inline: 16px; }
+  footer > div { gap: 14px; }
+}
+
+@media (min-width: 981px) and (max-width: 1200px) {
+  .hero-copy { width: 58%; }
+  .hero h1 { font-size: clamp(88px, 9vw, 112px); }
+  .hero-logo {
+    right: 1%;
+    width: min(34vw, 410px);
+    height: min(34vw, 410px);
+  }
+  .team-grid { grid-template-columns: 34% 1fr; }
+  .announcement { grid-template-columns: 180px 1fr 130px; }
 }
 
 @media (max-height: 650px) and (orientation: landscape) {
